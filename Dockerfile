@@ -22,13 +22,11 @@ RUN mkdir -p /home/hubot/.config/configstore && \
 USER hubot
 
 # optionally override variables with docker run -e HUBOT_...
-# You also will need to specify HUBOT_SLACK_TOKEN when running the cantainer
+# Modify ./ENV file to override these options
 ENV HUBOT_OWNER hubot
 ENV HUBOT_NAME hubot
 ENV HUBOT_ADAPTER slack
 ENV HUBOT_DESCRIPTION Just a friendly robot
 
-# generate and run our new bot
-# docker run -e HUBOT_SLACK_TOKEN=... -v /etc/localtime:/etc/localtime:ro rothgar/hubot:latest
-# Override adapter with -e HUBOT_ADAPTER irc <- different adapters need extra variables
+# Override adapter with -env-file ./ENV
 CMD /usr/local/bin/yo hubot --adapter $HUBOT_ADAPTER --owner $HUBOT_OWNER --name $HUBOT_NAME --description $HUBOT_DESCRIPTION --defaults && bin/hubot --adapter $HUBOT_ADAPTER
