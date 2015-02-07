@@ -30,4 +30,5 @@ ENV HUBOT_DESCRIPTION Just a friendly robot
 
 # generate and run our new bot
 # docker run -e HUBOT_SLACK_TOKEN=... -v /etc/localtime:/etc/localtime:ro rothgar/hubot:latest
+# Override adapter with -e HUBOT_ADAPTER irc <- different adapters need extra variables
 CMD /usr/local/bin/yo hubot --adapter $HUBOT_ADAPTER --owner $HUBOT_OWNER --name $HUBOT_NAME --description $HUBOT_DESCRIPTION --defaults && bin/hubot --adapter $HUBOT_ADAPTER
