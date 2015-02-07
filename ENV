@@ -1,0 +1,10 @@
+# SLACK adapter options
+HUBOT_ADAPTER=slack
+HUBOT_OWNER=hubot
+HUBOT_NAME=hubot
+HUBOT_DESCRIPTION="Just a friendly robot"
+HUBOT_SLACK_TOKEN=
+
+# IRC adapter options
+
+# CAMPFIRE adapter options
