@@ -16,5 +16,5 @@ docker build --tag=hubot .
 ###Run Container
 
 ```
-docker run -env-file ./ENV -v /etc/localtime:/etc/localtime:ro --name hubot hubot
+docker run --env-file ./ENV -v /etc/localtime:/etc/localtime:ro --name hubot hubot
 ```
