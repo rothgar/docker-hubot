@@ -11,7 +11,7 @@ RUN \
 RUN groupadd -g 501 hubot && \
   useradd -m -u 501 -g 501 hubot
 
-COPY ["external-scripts.json","package.json","scripts", "/home/hubot/bot"]
+COPY ["external-scripts.json","hubot-start.sh","package.json","scripts/", "/home/hubot/bot/"]
 
 # make directories and files
 RUN mkdir -p /home/hubot/.config/configstore && \
